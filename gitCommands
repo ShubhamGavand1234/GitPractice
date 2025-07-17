@@ -1,0 +1,43 @@
+Command	Description	Example
+git init	Initialize a new Git repository	git init
+git status	Show the working tree status	git status
+git log	Show commit logs	git log
+git show	Show various types of objects (like commit changes)	git show
+git add .	Stage all changes in the directory for commit	git add .
+git add <file>	Stage a specific file for commit	git add README.md
+git commit -m "<message>"	Commit staged changes with a message	git commit -m "Initial commit"
+git commit	Commit staged changes, opens editor for message	git commit
+git commit -am "<message>"	Add all tracked files and commit with a message	git commit -am "Update README"
+git branch	List all local branches	git branch
+git branch -M main	Rename current branch to main	git branch -M main
+git switch -c <branch>	Create and switch to a new branch	git switch -c feature-branch
+git checkout <commit>	Checkout a specific commit	git checkout abc1234
+git checkout -- <file>	Discard changes in a file	git checkout -- README.md
+git remote add <name> <url>	Add a new remote repository	git remote add origin https://github.com/user/repo.git
+git remote -v	List remote repositories	git remote -v
+git remote remove <name>	Remove a remote repository	git remote remove origin
+git fetch <remote>	Download objects from a remote repository	git fetch origin
+git merge <branch>	Merge changes from a branch into current branch	git merge feature-branch
+git merge <branch> --allow-unrelated-histories	Merge unrelated histories (useful when merging two separate repos)	git merge spring/main --allow-unrelated-histories
+git push	Push changes to the remote repository	git push
+git push -u origin <branch>	Push and set upstream for the branch	git push -u origin main
+git push origin <branch>	Push a specific branch to the remote	git push origin feature-branch
+git clone <url>	Clone a repository from a remote URL	git clone https://github.com/user/repo.git
+git submodule add <url> <path>	Add a git repository as a submodule	git submodule add https://github.com/user/repo.git lib/repo
+git mv <old> <new>	Rename a file and stage it	git mv oldname.txt newname.txt
+git rm <file>	Remove a file and stage the removal	git rm unwanted.txt
+git config --global core.editor "<editor>"	Set default editor for Git globally	git config --global core.editor "notepad++ -multiInst -nosession"
+git config --global -e	Edit the global Git configuration	git config --global -e
+git config --global diff.tool <tool>	Set the default diff tool	git config --global diff.tool p4merge
+git config --global difftool.<tool>.path "<path>"	Set the path for the diff tool	git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global difftool.prompt false	Disable diff tool prompt	git config --global difftool.prompt false
+git config --global merge.tool <tool>	Set the default merge tool	git config --global merge.tool p4merge
+git config --global mergetool.<tool>.path "<path>"	Set the path for the merge tool	git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global mergetool.prompt false	Disable merge tool prompt	git config --global mergetool.prompt false
+git config --global alias.<alias> "<command>"	Create a Git alias	git config --global alias.hist "log --oneline --graph --decorate --all"
+git config --global --list	List all global Git configurations	git config --global --list
+git ls-files	List files in the index (staged files)	git ls-files
+git reset HEAD <file>	Unstage a file	git reset HEAD README.md
+git log --oneline --graph --decorate --all	Show graphical one-line log of all branches	git log --oneline --graph --decorate --all
+git help <command>	Show help for a Git command	git help log
+git hist	Alias for pretty log view (if configured)	git hist
