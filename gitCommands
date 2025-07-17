@@ -41,3 +41,7 @@ git reset HEAD <file>	Unstage a file	git reset HEAD README.md
 git log --oneline --graph --decorate --all	Show graphical one-line log of all branches	git log --oneline --graph --decorate --all
 git help <command>	Show help for a Git command	git help log
 git hist	Alias for pretty log view (if configured)	git hist
+
+#Added commands for remote repo
+git remote add origin https://github.com/ShubhamGavand1234/GitPractice.git
+git  push -u origin master --tags  To push first time to remote Repo
